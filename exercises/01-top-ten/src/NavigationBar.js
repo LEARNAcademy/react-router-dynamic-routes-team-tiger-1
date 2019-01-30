@@ -27,18 +27,17 @@ class NavigationLinks extends Component {
 
   render() {
     return (
-      <div>
-         <Navbar color="light" light expand="md">
-           <NavbarBrand href="/">Team Tigers Restaurants</NavbarBrand>
-             <Nav className="ml-auto" navbar>
+         <Navbar  color="light" expand="lg" light>
+           <NavbarBrand  href="/">Team Tigers Restaurants</NavbarBrand>
+             <Nav navbar>
+             <NavItem>
+               <NavLink href="/">Home</NavLink>
+             </NavItem>
                <NavItem>
                  <NavLink href="/restaurants/">Restaurants</NavLink>
                </NavItem>
-
              </Nav>
-
          </Navbar>
-       </div>
     )
   }
 }

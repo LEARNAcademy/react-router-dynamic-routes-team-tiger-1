@@ -6,13 +6,13 @@ import {
   Switch
 } from 'react-router-dom'
 
-import './App.css'
+
 import NavigationLinks from "./NavigationBar"
 import Home from "./pages/Home.js"
 import Restaurants from "./pages/Restaurants.js"
 import Restaurant from "./pages/Restaurant.js"
 
-
+import './App.css';
 
 class App extends Component {
   render() {

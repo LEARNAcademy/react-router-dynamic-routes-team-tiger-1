@@ -23,8 +23,6 @@ class Restaurant extends Component {
       //set state to new ID
       this.setState({restaurantId: match.params.id})
     }
-
-
   }
   render() {
     //destructure current resturant ID
@@ -33,18 +31,22 @@ class Restaurant extends Component {
     const resturantObject = restaurantsData.find((resturant) => resturant.id == restaurantId)
     return (
       <div>
+      {resturantObject &&
+      <div>
         <h1>{resturantObject.name}</h1>
         <p>{resturantObject.location}</p>
         <h3>Top Three Dishes</h3>
         <ul>
         {resturantObject.menuItems.map((item) =>
           <li>
-              {item}
+            {item}
           </li>
-          )}
+      )}
         </ul>
         </div>
+      }
 
+        </div>
     )
   }
 }

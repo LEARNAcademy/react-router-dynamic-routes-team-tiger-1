@@ -8,28 +8,28 @@ import {
 
 import restaurantsData from "../store/restaurantsData.js"
 import Restaurant from "./Restaurant"
+import ResturantCard from "../ResturantCard.js"
+
 
 class Restaurants extends Component {
   constructor(props){
     super(props)
     this.state = {
+      //Assign array of resturant objects to state
       restaurants: restaurantsData
     }
   }
 
   render() {
+    //deconstructing state
     const { restaurants }= this.state
     return (
-      <div>
-        <ul>
+      <div className="resturants">
+
         {restaurants.map((restaurant) =>
-          <li>
-            <Link to={`/restaurant/${restaurant.id}`}>
-              {restaurant.name}
-            </Link>
-            </li>
+            <ResturantCard title = {restaurant.name} location = {restaurant.location} link ={`/restaurant/${restaurant.id}`}/>
           )}
-        </ul>
+
       </div>
     )
   }
